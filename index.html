@@ -9,45 +9,64 @@
     body {
         margin: 0;
         font-family: "Cairo", sans-serif;
-        background-color: #000;
-        color: #f5d19c;
-        text-align: center;
+        background: #fff; /* الخلفية البيضاء */
+        color: #b18746;  /* ذهبي مناسب للصفحة البيضاء */
     }
 
+    /* شريط علوي */
+    .topbar {
+        width: 100%;
+        padding: 12px 0;
+        background: #fff;
+        border-bottom: 2px solid #e8e2d9;
+        text-align: center;
+        font-size: 18px;
+        color: #b18746;
+        font-weight: 600;
+    }
+
+    /* الهيدر */
     header {
         padding: 40px 20px;
-        border-bottom: 1px solid #333;
+        text-align: center;
+        background: #fff;
+        border-bottom: 2px solid #e8e2d9;
     }
 
     .logo {
         width: 180px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     h1 {
         margin: 10px 0;
         font-size: 28px;
-        color: #f5d19c;
+        color: #b18746;
+        font-weight: 600;
     }
 
+    /* المنتجات */
     .products {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 20px;
+        gap: 22px;
         padding: 30px;
     }
 
     .card {
-        background: #111;
+        background: #fff;
         padding: 15px;
-        border: 1px solid #222;
+        border: 1px solid #e8e2d9;
         border-radius: 12px;
         transition: 0.3s;
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(0,0,0,0.05);
     }
 
     .card:hover {
         transform: scale(1.03);
-        border-color: #f5d19c;
+        border-color: #b18746;
+        box-shadow: 0 0 12px rgba(177,135,70,0.3);
     }
 
     .card img {
@@ -58,17 +77,10 @@
     .price {
         margin-top: 10px;
         font-size: 18px;
-        color: #f5d19c;
+        color: #b18746;
     }
 
-    footer {
-        margin-top: 50px;
-        padding: 20px;
-        border-top: 1px solid #222;
-        font-size: 15px;
-        color: #777;
-    }
-
+    /* زر واتساب */
     a.whatsapp {
         position: fixed;
         bottom: 25px;
@@ -80,10 +92,24 @@
         text-decoration: none;
         font-size: 16px;
     }
+
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        color: #777;
+        border-top: 1px solid #e8e2d9;
+        font-size: 15px;
+    }
+
 </style>
 </head>
 
 <body>
+
+<div class="topbar">
+    العلاء للعبايات النسائية الراقية
+</div>
 
 <header>
     <img src="YOUR_LOGO.png" class="logo" alt="Logo">
@@ -91,19 +117,23 @@
 </header>
 
 <section class="products">
-    <!-- المنتج الأول -->
-    <div class="card">
-        <img src="product1.jpg" alt="عباية 1">
-        <p class="price">السعر: 14,000 ريال</p>
-    </div>
 
-    <!-- المنتج الثاني -->
-    <div class="card">
-        <img src="product2.jpg" alt="عباية 2">
-        <p class="price">السعر: 15,000 ريال</p>
-    </div>
+    <!-- المنتج 1 -->
+    <a href="product1.html" target="_blank" style="text-decoration:none;">
+        <div class="card">
+            <img src="product1.jpg">
+            <p class="price">السعر: 14,000 ريال</p>
+        </div>
+    </a>
 
-    <!-- أضف منتجات غير محدودة بنفس الطريقة -->
+    <!-- المنتج 2 -->
+    <a href="product2.html" target="_blank" style="text-decoration:none;">
+        <div class="card">
+            <img src="product2.jpg">
+            <p class="price">السعر: 15,000 ريال</p>
+        </div>
+    </a>
+
 </section>
 
 <a class="whatsapp" href="https://wa.me/967702566647">تواصل واتساب</a>
