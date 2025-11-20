@@ -3,116 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YOUNES ALKISER - خدمات رقمية</title>
+<title>العلاء للعبايات النسائية الراقية</title>
+
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; }
-  body { background-color:#0a1f44; color:#ffffff; line-height:1.6; }
+    body {
+        margin: 0;
+        font-family: "Cairo", sans-serif;
+        background-color: #000;
+        color: #f5d19c;
+        text-align: center;
+    }
 
-  header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
-    background:#0a1f44;
-    position:sticky;
-    top:0;
-    z-index:1000;
-  }
+    header {
+        padding: 40px 20px;
+        border-bottom: 1px solid #333;
+    }
 
-  .logo h1 { color:#ffd700; font-size:28px; margin:0; font-weight:bold; }
-  nav a { text-decoration:none; color:#ffd700; font-weight:bold; margin-left:15px; }
+    .logo {
+        width: 180px;
+        margin-bottom: 15px;
+    }
 
-  .hero {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:120px 20px;
-  }
-  .hero h1 { font-size:3em; margin-bottom:15px; }
-  .hero p { font-size:1.3em; margin-bottom:30px; }
-  .btn { background-color:#ffd700; color:#0a1f44; padding:15px 30px; font-size:1.1em; border:none; border-radius:50px; cursor:pointer; transition:0.3s; }
-  .btn:hover { opacity:0.85; }
+    h1 {
+        margin: 10px 0;
+        font-size: 28px;
+        color: #f5d19c;
+    }
 
-  .section-title { text-align:center; margin:60px 0 40px; font-size:2.5em; color:#ffd700; }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        padding: 30px;
+    }
 
-  .services, .features, .pricing { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; padding:0 20px 60px; }
-  .card { background:#ffd700; color:#0a1f44; padding:20px; border-radius:12px; text-align:center; font-weight:bold; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition:transform 0.3s; }
-  .card:hover { transform:translateY(-5px); }
+    .card {
+        background: #111;
+        padding: 15px;
+        border: 1px solid #222;
+        border-radius: 12px;
+        transition: 0.3s;
+    }
 
-  .two-columns { display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:center; padding:60px 20px; }
-  .two-columns .text { flex:1; min-width:250px; color:#ffffff; }
-  .two-columns .image { flex:1; min-width:250px; }
-  .two-columns img { width:100%; border-radius:12px; }
+    .card:hover {
+        transform: scale(1.03);
+        border-color: #f5d19c;
+    }
 
-  footer {
-    background:#0a1f44;
-    padding:40px 20px;
-    text-align:center;
-  }
-  .social a { margin:0 10px; color:#ffd700; font-weight:bold; text-decoration:none; }
-  .social a:hover { opacity:0.8; }
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+    }
 
-  @media(max-width:768px){ .hero h1 { font-size:2.2em; } .hero p { font-size:1em; } }
+    .price {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #f5d19c;
+    }
+
+    footer {
+        margin-top: 50px;
+        padding: 20px;
+        border-top: 1px solid #222;
+        font-size: 15px;
+        color: #777;
+    }
+
+    a.whatsapp {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        background: #25D366;
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 16px;
+    }
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">
-    <h1>YOUNES ALKISER</h1>
-  </div>
-  <nav>
-    <a href="#services">خدماتنا</a>
-    <a href="#features">مميزاتنا</a>
-    <a href="#pricing">التسعير</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
+    <img src="YOUR_LOGO.png" class="logo" alt="Logo">
+    <h1>العلاء للعبايات النسائية الراقية</h1>
 </header>
 
-<section class="hero">
-  <h1>مرحبًا بكم في YOUNES ALKISER</h1>
-  <p>نقدم أفضل الخدمات الرقمية: رشق متابعين، شراء أرقام وهمية، تصاميم جرافيك، أنميشين، وتصاميم بالذكاء الاصطناعي.</p>
-  <button class="btn" onclick="location.href='#services'">استعرض خدماتنا</button>
+<section class="products">
+    <!-- المنتج الأول -->
+    <div class="card">
+        <img src="product1.jpg" alt="عباية 1">
+        <p class="price">السعر: 14,000 ريال</p>
+    </div>
+
+    <!-- المنتج الثاني -->
+    <div class="card">
+        <img src="product2.jpg" alt="عباية 2">
+        <p class="price">السعر: 15,000 ريال</p>
+    </div>
+
+    <!-- أضف منتجات غير محدودة بنفس الطريقة -->
 </section>
 
-<h2 class="section-title" id="services">خدماتنا</h2>
-<div class="services">
-  <div class="card">📈 رشق متابعين<br><strong>5$</strong></div>
-  <div class="card">📱 شراء أرقام وهمية<br><strong>3$</strong></div>
-  <div class="card">🎨 تصاميم جرافيك<br><strong>10$</strong></div>
-  <div class="card">🎬 تصاميم أنميشين<br><strong>20$</strong></div>
-  <div class="card">🤖 تصاميم بالذكاء الاصطناعي<br><strong>15$</strong></div>
-</div>
+<a class="whatsapp" href="https://wa.me/967702566647">تواصل واتساب</a>
 
-<h2 class="section-title" id="features">مميزاتنا</h2>
-<div class="two-columns">
-  <div class="text">
-    <h3>خدمات احترافية وسريعة</h3>
-    <p>نوفر حلول رقمية متكاملة لتطوير عملك وزيادة التفاعل مع جمهورك بطريقة مبتكرة وسهلة.</p>
-  </div>
-  <div class="image"><img src="https://via.placeholder.com/500x300.png?text=خدمات+YOUNES+ALKISER" alt="مميزات الموقع"></div>
-</div>
-
-<h2 class="section-title" id="pricing">التسعير</h2>
-<div class="services">
-  <div class="card">رشق متابعين<br><strong>5$</strong></div>
-  <div class="card">أرقام وهمية<br><strong>3$</strong></div>
-  <div class="card">تصاميم جرافيك<br><strong>10$</strong></div>
-  <div class="card">أنميشين<br><strong>20$</strong></div>
-  <div class="card">ذكاء اصطناعي<br><strong>15$</strong></div>
-</div>
-
-<footer id="contact">
-  <h3>تواصل معنا</h3>
-  <div class="social">
-    <a href="https://wa.me/967779225741">واتساب</a> |
-    <a href="https://instagram.com/yk.711">@yk.711</a> |
-    <a href="mailto:younesalkiser@gmail.com">إيميل</a> |
-    <span>📞 779225741</span>
-  </div>
-  <p>© 2025 جميع الحقوق محفوظة لـ YOUNES ALKISER</p>
+<footer>
+    © 2025 جميع الحقوق محفوظة — العلاء للعبايات النسائية الراقية
 </footer>
 
 </body>
