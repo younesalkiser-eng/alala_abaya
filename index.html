@@ -1,146 +1,124 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>العلاء للعبايات النسائية الراقية</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>متجر سرداب - نسختك الخاصة</title>
 <style>
     body {
         margin: 0;
-        font-family: "Cairo", sans-serif;
-        background: #fff; /* الخلفية البيضاء */
-        color: #b18746;  /* ذهبي مناسب للصفحة البيضاء */
-    }
-
-    /* شريط علوي */
-    .topbar {
-        width: 100%;
-        padding: 12px 0;
+        font-family: sans-serif;
         background: #fff;
-        border-bottom: 2px solid #e8e2d9;
-        text-align: center;
-        font-size: 18px;
-        color: #b18746;
-        font-weight: 600;
+        display: flex;
     }
-
-    /* الهيدر */
-    header {
-        padding: 40px 20px;
-        text-align: center;
-        background: #fff;
-        border-bottom: 2px solid #e8e2d9;
+    /* القائمة الجانبية */
+    .sidebar {
+        width: 250px;
+        background: #111;
+        color: #fff;
+        height: 100vh;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
     }
-
+    .sidebar h2 {
+        margin-top: 0;
+        font-size: 22px;
+        text-align: center;
+    }
+    .sidebar a {
+        display: block;
+        color: #fff;
+        padding: 10px 0;
+        text-decoration: none;
+        border-bottom: 1px solid #333;
+        font-size: 16px;
+    }
+    .sidebar a:hover {
+        color: #f4d03f;
+    }
+    /* المحتوى */
+    .content {
+        margin-right: 270px;
+        padding: 20px;
+        width: calc(100% - 270px);
+    }
+    /* الشعار */
     .logo {
-        width: 180px;
-        margin-bottom: 10px;
+        text-align: center;
+        margin-bottom: 30px;
     }
-
-    h1 {
-        margin: 10px 0;
-        font-size: 28px;
-        color: #b18746;
-        font-weight: 600;
+    .logo img {
+        width: 140px;
+        height: auto;
     }
-
     /* المنتجات */
     .products {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 22px;
-        padding: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
     }
-
-    .card {
+    .product {
         background: #fff;
         padding: 15px;
-        border: 1px solid #e8e2d9;
-        border-radius: 12px;
-        transition: 0.3s;
-        cursor: pointer;
-        box-shadow: 0 0 8px rgba(0,0,0,0.05);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        text-align: center;
     }
-
-    .card:hover {
-        transform: scale(1.03);
-        border-color: #b18746;
-        box-shadow: 0 0 12px rgba(177,135,70,0.3);
-    }
-
-    .card img {
+    .product img {
         width: 100%;
         border-radius: 10px;
     }
-
-    .price {
-        margin-top: 10px;
-        font-size: 18px;
-        color: #b18746;
-    }
-
-    /* زر واتساب */
-    a.whatsapp {
-        position: fixed;
-        bottom: 25px;
-        left: 25px;
-        background: #25D366;
-        color: #fff;
-        padding: 12px 18px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 16px;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 50px;
-        padding: 20px;
-        color: #777;
-        border-top: 1px solid #e8e2d9;
+    .product-details {
+        margin: 10px 0 5px;
         font-size: 15px;
+        color: #555;
     }
-
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    .whatsapp-btn {
+        display: block;
+        width: 100%;
+        background: #25d366;
+        color: #fff;
+        padding: 10px 0;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .whatsapp-btn:hover {
+        background: #1eb656;
+    }
 </style>
 </head>
+<body><!-- القائمة الجانبية --><div class="sidebar">
+    <h2>القائمة</h2>
+    <a href="#">الرئيسية</a>
+    <a href="#">العبايات</a>
+    <a href="#">العروض</a>
+    <a href="#">تواصل معنا</a>
+</div><!-- المحتوى الأساسي --><div class="content">
+    <!-- الشعار أعلى الصفحة -->
+    <div class="logo">
+        <img src="logo.png" alt="شعار المتجر" />
+    </div><!-- المنتجات -->
+<div class="products">
 
-<body>
+    <!-- مثال منتج واحد – يمكنك نسخه وتكراره -->
+    <div class="product">
+        <img src="product1.jpg" alt="منتج 1" />
+        <div class="product-details">موديل 998 – تفاصيل المنتج هنا</div>
+        <div class="price">السعر: 27,000 ريال</div>
+        <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXXX?text=اريد%20شراء%20موديل%20998" target="_blank">اطلب عبر واتساب</a>
+    </div>
 
-<div class="topbar">
-    العلاء للعبايات النسائية الراقية
 </div>
 
-<header>
-    <img src="YOUR_LOGO.png" class="logo" alt="Logo">
-    <h1>العلاء للعبايات النسائية الراقية</h1>
-</header>
-
-<section class="products">
-
-    <!-- المنتج 1 -->
-    <a href="product1.html" target="_blank" style="text-decoration:none;">
-        <div class="card">
-            <img src="product1.jpg">
-            <p class="price">السعر: 14,000 ريال</p>
-        </div>
-    </a>
-
-    <!-- المنتج 2 -->
-    <a href="product2.html" target="_blank" style="text-decoration:none;">
-        <div class="card">
-            <img src="product2.jpg">
-            <p class="price">السعر: 15,000 ريال</p>
-        </div>
-    </a>
-
-</section>
-
-<a class="whatsapp" href="https://wa.me/967702566647">تواصل واتساب</a>
-
-<footer>
-    © 2025 جميع الحقوق محفوظة — العلاء للعبايات النسائية الراقية
-</footer>
-
-</body>
+</div></body>
 </html>
