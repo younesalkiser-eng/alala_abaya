@@ -22,11 +22,14 @@
   transform: translateX(0);
 }/* Sidebar Toggle Button */ .sidebar-toggle { position: fixed; left: 15px; top: 15px; background: #000; color: #fff; border-radius: 8px; padding: 10px 14px; font-size: 18px; cursor: pointer; z-index: 3000; }
 
-/* Overlay */ .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: none; z-index: 1500; } .overlay.show { display: block; } </style>
+/* Overlay */ .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: none; z-index: 1500; } .overlay.show { display: block; }
+
+/* ===== زر القائمة الاحترافي ===== / .menu-btn { position: fixed; left: 15px; top: 15px; width: 48px; height: 48px; border: none; background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.15); z-index: 3000; transition: 0.25s ease; } .menu-btn:hover { transform: scale(1.07); } .menu-icon { width: 26px; height: 3px; background: #000; border-radius: 4px; position: relative; transition: 0.35s ease; } .menu-icon::before, .menu-icon::after { content: ""; position: absolute; width: 26px; height: 3px; background: #000; border-radius: 4px; transition: 0.35s ease; } .menu-icon::before { top: -8px; } .menu-icon::after { top: 8px; } / زر يتحول إلى X عند فتح القائمة */ .sidebar.open ~ header .menu-icon { background: transparent; } .sidebar.open ~ header .menu-icon::before { top: 0; transform: rotate(45deg); } .sidebar.open ~ header .menu-icon::after { top: 0; transform: rotate(-45deg); } </style>
 
 </head><body>
   <!-- Header (logo only) -->
   <header>
+  <button id="menuButton" class="menu-btn"><span class="menu-icon"></span></button>
     <img src="logo.png" alt="شعار العلاء للعبايات" />
   </header>  <!-- Sidebar -->  <div class="sidebar">
   <a href="#">الرئيسية</a>  <div class="dropdown">
