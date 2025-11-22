@@ -1,124 +1,184 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!-- Full Sirdab-like Store HTML Template --><!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>متجر سرداب - نسختك الخاصة</title>
-<style>
-    body {
-        margin: 0;
-        font-family: sans-serif;
-        background: #fff;
-        display: flex;
-    }
-    /* القائمة الجانبية */
-    .sidebar {
-        width: 250px;
-        background: #111;
-        color: #fff;
-        height: 100vh;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        right: 0;
-    }
-    .sidebar h2 {
-        margin-top: 0;
-        font-size: 22px;
-        text-align: center;
-    }
-    .sidebar a {
-        display: block;
-        color: #fff;
-        padding: 10px 0;
-        text-decoration: none;
-        border-bottom: 1px solid #333;
-        font-size: 16px;
-    }
-    .sidebar a:hover {
-        color: #f4d03f;
-    }
-    /* المحتوى */
-    .content {
-        margin-right: 270px;
-        padding: 20px;
-        width: calc(100% - 270px);
-    }
-    /* الشعار */
-    .logo {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .logo img {
-        width: 140px;
-        height: auto;
-    }
-    /* المنتجات */
-    .products {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    .product {
-        background: #fff;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .product img {
-        width: 100%;
-        border-radius: 10px;
-    }
-    .product-details {
-        margin: 10px 0 5px;
-        font-size: 15px;
-        color: #555;
-    }
-    .price {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #000;
-    }
-    .whatsapp-btn {
-        display: block;
-        width: 100%;
-        background: #25d366;
-        color: #fff;
-        padding: 10px 0;
-        text-decoration: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .whatsapp-btn:hover {
-        background: #1eb656;
-    }
-</style>
-</head>
-<body><!-- القائمة الجانبية --><div class="sidebar">
-    <h2>القائمة</h2>
-    <a href="#">الرئيسية</a>
-    <a href="#">العبايات</a>
-    <a href="#">العروض</a>
-    <a href="#">تواصل معنا</a>
-</div><!-- المحتوى الأساسي --><div class="content">
-    <!-- الشعار أعلى الصفحة -->
-    <div class="logo">
-        <img src="logo.png" alt="شعار المتجر" />
-    </div><!-- المنتجات -->
-<div class="products">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>العلاء للعبايات النسائية الراقية</title>
+  <style>
+/* Reset */
+* {margin:0;padding:0;box-sizing:border-box;font-family:Tahoma;}
+body {background:#ffffff;color:#111;}/* Smooth Animation */ :root { --shadow:0 6px 18px rgba(0,0,0,0.10); --gold:#d5b773; --dark:#0f0f0f; }
 
-    <!-- مثال منتج واحد – يمكنك نسخه وتكراره -->
-    <div class="product">
-        <img src="product1.jpg" alt="منتج 1" />
-        <div class="product-details">موديل 998 – تفاصيل المنتج هنا</div>
-        <div class="price">السعر: 27,000 ريال</div>
-        <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXXX?text=اريد%20شراء%20موديل%20998" target="_blank">اطلب عبر واتساب</a>
+/* Header */ header { background:#000; padding:20px; border-bottom:2px solid #111; display:flex; justify-content:center; align-items:center; position:sticky; top:0; z-index:10; } header img {height:70px; filter:drop-shadow(0 3px 6px rgba(0,0,0,0.4));}
+
+/* Sidebar */ .sidebar { width:260px; background:#0d0d0d; height:100vh; position:fixed; top:0; right:0; padding-top:130px; border-left:1px solid #222; overflow-y:auto; } .sidebar a, .dropbtn { display:block; color:#fff; text-decoration:none; padding:16px 22px; font-size:18px; border-bottom:1px solid #111; transition:0.3s; } .sidebar a:hover, .dropbtn:hover {background:#1a1a1a;}
+
+/* Dropdown */ .dropdown-content {display:none;background:#161616;} .dropdown-content a {padding:14px 22px;font-size:17px;} .dropdown:hover .dropdown-content {display:block;}
+
+/* Main container */ .container {margin-right:280px;padding:25px;}
+
+/* Search bar */ .search-bar input { width:100%;padding:16px;font-size:18px; border:1px solid #ccc;border-radius:12px; box-shadow:var(--shadow); }
+
+/* Slider */ .slider img {transition:opacity 1s ease-in-out;}
+
+/* Products grid */ .products { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:24px; margin-top:20px; }
+
+/* Product Card */ .product { background:#fff; border-radius:16px; padding:16px; box-shadow:var(--shadow); transition:0.25s; } .product:hover {transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,0,0,0.18);} .product img {width:100%;border-radius:14px;} .price {font-size:20px;font-weight:bold;margin:12px 0;color:#000;}
+
+/* WhatsApp button */ .order-btn { background:#25D366; color:#fff; text-decoration:none; padding:12px; border-radius:10px; display:block; margin-top:12px; font-size:18px; font-weight:bold; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.15); } .order-btn:hover {background:#1ebe5c;}
+
+/* Footer */ footer { background:#000;color:#fff;text-align:center;padding:35px;margin-top:40px; border-top:2px solid #111; } </style>
+
+</head><body>
+  <!-- Header (logo only) -->
+  <header>
+    <img src="logo.png" alt="شعار العلاء للعبايات" />
+  </header>  <!-- Sidebar -->  <div class="sidebar">
+  <a href="#">الرئيسية</a>  <div class="dropdown">
+    <button class="dropbtn">العبايات ▼</button>
+    <div class="dropdown-content">
+      <a href="#">كل العبايات</a>
+      <a href="#">عبايات راقية</a>
+      <a href="#">عبايات ملونة</a>
+      <a href="#">عبايات شبابية</a>
+      <a href="#">عبايات رسمية</a>
     </div>
+  </div><a href="#">وصل حديثاً</a> <a href="#">الأكثر طلباً</a> <a href="#">الأسعار المخفضة</a> <a href="#">سياسة الشحن والاستبدال</a> <a href="#">تواصل معنا</a>
+
+</div><style>
+  .dropdown { border-bottom:1px solid #222; }
+  .dropbtn {
+    width:100%; background:none; border:none; color:#fff; text-align:right;
+    padding:14px 20px; font-size:17px; cursor:pointer;
+  }
+  .dropdown-content {
+    display:none; background:#181818;
+  }
+  .dropdown-content a {
+    padding:12px 20px; border-bottom:1px solid #111;
+  }
+  .dropdown:hover .dropdown-content {
+    display:block;
+  }
+</style>  <!-- Main Section -->  <div class="container">
+    <h2>العلاء للعبايات النسائية الراقية</h2>
+    <p>أحدث الموديلات — جودة فاخرة — خامات أصلية</p><div class="products">
+
+  <!-- Product 1 -->
+  <div class="product">
+    <a href="product1.html" target="_blank">
+      <img src="abaya1.jpg" alt="عباية 1" />
+    </a>
+    <div class="price">السعر: 18,000 ريال</div>
+    <div>رقم الموديل: 998</div>
+    <a class="order-btn" href="https://wa.me/967702566647">طلب عبر واتساب</a>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product">
+    <a href="product2.html" target="_blank">
+      <img src="abaya2.jpg" alt="عباية 2" />
+    </a>
+    <div class="price">السعر: 20,000 ريال</div>
+    <div>رقم الموديل: 112</div>
+    <a class="order-btn" href="https://wa.me/967702566647">طلب عبر واتساب</a>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product">
+    <a href="product3.html" target="_blank">
+      <img src="abaya3.jpg" alt="عباية 3" />
+    </a>
+    <div class="price">السعر: 22,000 ريال</div>
+    <div>رقم الموديل: 551</div>
+    <a class="order-btn" href="https://wa.me/967702566647">طلب عبر واتساب</a>
+  </div>
 
 </div>
 
-</div></body>
-</html>
+  </div><!-- Slider Section --><div class="slider" style="width:100%;height:260px;overflow:hidden;border-radius:12px;margin-bottom:25px;position:relative;">
+  <img src="slider1.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;animation:fade 12s infinite;">
+  <img src="slider2.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;animation:fade 12s infinite 4s;">
+  <img src="slider3.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;animation:fade 12s infinite 8s;">
+</div><style>
+@keyframes fade {
+  0% {opacity:0;}
+  10% {opacity:1;}
+  30% {opacity:1;}
+  40% {opacity:0;}
+  100% {opacity:0;}
+}
+</style><!-- Enhanced Product Card Style --><style>
+.product {
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:14px;
+  padding:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.10);
+}
+</style><!-- Footer --><footer style="background:#000;color:#fff;text-align:center;padding:25px;margin-top:40px;">
+  <h3>العلاء للعبايات النسائية الراقية</h3>
+  <p>للتواصل: 967702566647+</p>
+  <p>جميع الحقوق محفوظة © 2025</p>
+</footer></body>
+<!-- Product Page Template -->
+<!-- Save as product-template.html and duplicate for each product --><!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>تفاصيل المنتج</title>
+<style>
+body {font-family: Tahoma;background:#fff;margin:0;padding:20px;}
+.product-box {max-width:700px;margin:auto;border:1px solid #ccc;border-radius:12px;padding:20px;}
+.product-box img {width:100%;border-radius:12px;}
+.price {font-size:20px;font-weight:bold;margin:10px 0;color:#000;}
+.btn {display:block;margin-top:15px;padding:14px;background:#25D366;color:#fff;text-decoration:none;text-align:center;border-radius:8px;}
+</style>
+</head>
+<body>
+<div class="product-box">
+  <img src="IMAGE.jpg" alt="المنتج">
+  <h2>اسم المنتج</h2>
+  <div class="price">السعر: 00000 ريال</div>
+  <div>رقم الموديل: MODEL</div>
+  <p>وصف المنتج يوضع هنا...</p>
+  <a class="btn" href="https://wa.me/967702566647">طلب عبر واتساب</a>
+</div>
+</body>
+</html><!-- Contact Page --><!-- contact.html --><!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>تواصل معنا</title>
+<style>
+body {font-family:Tahoma;background:#fff;margin:0;padding:20px;}
+.box {max-width:600px;margin:auto;border:1px solid #ccc;border-radius:12px;padding:25px;}
+input, textarea {width:100%;padding:12px;border:1px solid #bbb;border-radius:6px;margin:10px 0;}
+.btn {background:#000;color:#fff;padding:12px;border:none;width:100%;border-radius:6px;font-size:17px;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>تواصل معنا</h2>
+<p>رقم واتساب: 967702566647+</p>
+<p>يمكنك مراسلتنا مباشرة عبر النموذج:</p>
+<input type="text" placeholder="الاسم">
+<input type="text" placeholder="رقم الهاتف">
+<textarea placeholder="رسالتك" rows="5"></textarea>
+<button class="btn">إرسال</button>
+</div>
+</body>
+</html><!-- Search System --><script>
+function searchProducts() {
+  let input = document.getElementById( search ).value.toLowerCase();
+  let items = document.getElementsByClassName( product );
+  for (let i=0; i < items.length; i++) {
+    let txt = items[i].innerText.toLowerCase();
+    items[i].style.display = txt.includes(input) ?    :  none ;
+  }
+}
+</script><!-- Add Search Bar to main page --><style>
+.search-bar {margin:20px 0;}
+.search-bar input {width:100%;padding:14px;font-size:17px;border:1px solid #aaa;border-radius:8px;}
+</style><!-- Place Search Bar under header in main page --><div class="search-bar">
+<input id="search" onkeyup="searchProducts()" placeholder="ابحث عن موديل…">
+</div></html>
